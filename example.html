@@ -1,0 +1,160 @@
+<!Doctype Html>
+<html> 
+<head>
+<style>
+.A{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+</style>
+<div>
+<img  src="logo-wide.png" class="A"></img>
+<p style="text-align:center;color:silver">Near Jnana Bharathi Campaus,off BDA Outer Ring Road,Mallathalli,Benaluru,Karnataka 560056</p>
+<p style="text-align:center;color:blue"> principal@dr-ait.org|www.drait.edu.in </p>
+</div>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+
+
+.slideshow{
+float:left;
+width:65%;
+text-align:center;
+}
+
+.dot{
+height:20px;
+width:20px;
+margin:02px;
+background-color:#bbb;
+border-radius:50%;
+display:inline-block;
+transition:background-color 0.6s ease;
+text-align:center;
+}
+.active{
+background-color:#717171;
+}
+.fade{
+-webkit-animation-name:fade;
+-webkit-animation-duration:1.5s;
+animation-duration:1.5s;
+animation-name:fade;
+}
+@-webkit-keyframes fade{
+from {opacity:.4}
+to{opacity:1}
+}
+.myDIV {
+width:60%;
+float:left;
+}
+.mydIV {
+width:35%;
+float:right;
+}
+.circle-button {
+  border: none;
+  color: white;
+  background-color:cyan;
+  padding: 15px 39px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:30Px;
+}
+
+.btn-sm:hover {
+background-color: #0047ab;
+}
+</style>
+</head>
+<body>
+<div class="mydIV">
+<h2 style="color:red">latest news</h2>
+
+<marquee direction="up" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+    <div class="list-group-item">
+        <p style="color:silver">Invitation of Quotations for Supply of Optical Fiber Experimental kit to Physics Department</p>
+        <a href="Invitation Quotations for Suppy & Installation of Equipment.pdf" class="circle-button btn btn-sm" target="_blank">Tender Notification</a>
+        <a href="Invitation Quotation for supply of Optical Fiber experimental kit.pdf" class="circle-button btn btn-sm" target="_blank">View Details</a>
+    </div>
+     <div class="list-group-item">
+        <p style="color:silver">Online Payment Terms and Conditions</p>
+        <a href="terms_condition.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+    <div>
+        <p style="color:silver">UG SEE Arrear SEPT 2020</p>
+        <a href="UG-SEE-Arrear-SEPT2020.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+    <div>
+        <p style="color:silver">UG SEE Layout SEPT 2020</p>
+        <a href="UG-SEE-Layout-SEPT2020.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+    <div>
+        <p style="color:silver">UG SEE Regular SEPT 2020</p>
+        <a href="UG-SEE-Regular-SEPT2020.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+</marquee>
+</div>
+<div>
+	<div class="slideshow">
+		<div class="mySlides fade">
+			<img src="A.jpg" style="width:50%"></img>
+		</div>
+		<div class="mySlides fade">
+			<img src="B.jpg" style="width:50%"></img>
+		</div>
+		<div class="mySlides fade">
+			<img src="C.jpg" style="width:50%"></img>
+		</div>
+		<div style="text-align:center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+	</div>
+</div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div>
+<a href="toggle.html" style=" padding:40px 80px;background-color:red;align-left:50px">Management</a>
+<a href="toggle.html" style=" padding:40px 80px;background-color:red;align-left:50px">Programs Offered</a>
+<a href="toggle.html" style="padding:40px 80px;background-color:red;align-left:50px"></a>
+<a href="toggle.html" style="padding:40px 80px;background-color:red;align-left:50px">management</a>
+<a href="toggle.html" style="padding:40px 80px;background-color:red;align-left:50px">management</a>
+<a href="toggle.html" style="padding:40px 80px;background-color:red;align-left:50px">management</a>
+<a href="toggle.html" style="padding:40px 80px;background-color:red;align-left:50px">management</a>
+
+</div>
+
+</body>
+ 
+</html>

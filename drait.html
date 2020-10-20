@@ -1,0 +1,310 @@
+<!Doctype Html>
+<html> 
+<head>
+<style>
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+ .on{
+ text-align:center;
+ color:silver;
+ }
+</style>
+<div>
+<img src="logo-wide.png" style="width:100"></img>
+<p style="text-align:center;color:silver">Near Jnana Bharathi Campaus,off BDA Outer Ring Road,Mallathalli,Benaluru,Karnataka 560056</p>
+<p style="text-align:center;color:blue"> principal@dr-ait.org|www.drait.edu.in </p>
+<div class="on"><a href="http://onlinepay.drait.in/">Online Fee Payment</a></div>
+</div>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+.circle-button {
+  border: none;
+  color: white;
+  background-color:cyan;
+  padding: 15px 39px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:30Px;
+}
+
+.btn-sm:hover {
+background-color: #0047ab;
+}
+
+</style>
+<style>
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	
+	position: absolute;
+	width: 65%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+.mydIV {
+width:35%;
+float:right;
+}
+.circle-button {
+  border: none;
+  color: white;
+  background-color:cyan;
+  padding: 15px 39px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:30Px;
+}
+
+.btn-sm:hover {
+background-color: #0047ab;
+}
+</style>
+
+</head>
+<body>
+<div class="mydIV">
+<h2 style="color:red">latest news</h2>
+
+<marquee direction="up" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+    <div class="list-group-item">
+        <p style="color:silver">Invitation of Quotations for Supply of Optical Fiber Experimental kit to Physics Department</p>
+        <a href="Invitation Quotations for Suppy & Installation of Equipment.pdf" class="circle-button btn btn-sm" target="_blank">Tender Notification</a>
+        <a href="Invitation Quotation for supply of Optical Fiber experimental kit.pdf" class="circle-button btn btn-sm" target="_blank">View Details</a>
+    </div>
+     <div class="list-group-item">
+        <p style="color:silver">Online Payment Terms and Conditions</p>
+        <a href="terms_condition.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+    <div>
+        <p style="color:silver">UG SEE Arrear SEPT 2020</p>
+        <a href="UG-SEE-Arrear-SEPT2020.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+    <div>
+        <p style="color:silver">UG SEE Layout SEPT 2020</p>
+        <a href="UG-SEE-Layout-SEPT2020.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+    <div>
+        <p style="color:silver">UG SEE Regular SEPT 2020</p>
+        <a href="UG-SEE-Regular-SEPT2020.pdf" class="circle-button btn-sm" target="_blank">View Details</a>
+    </div>
+</marquee>
+</div>
+
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="A.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="B.jpg" alt="Second" class="slide" />
+		<img src="C.jpg" alt="Third" class="slide" />
+		<img src="D.jpg" alt="Third" class="slide" />
+	</div>
+</div>	
+<script>
+(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+
+</script>
+<style>
+.A11{
+background-color:#ff0000;
+padding:40px 80px;
+}
+.A12{
+background-color:#FFCCCC;
+padding:40px 80px;
+}
+.A13{
+background-color:#FF66FF;
+padding:40px 80px;
+}
+.A14{
+background-color:#FF99FF;
+padding:40px 80px;
+}
+.A15{
+background-color:#FF33FF;
+padding:40px 80px;
+}
+.A16{
+background-color:#CC3399;
+padding:40px 80px;
+}
+.A17{
+background-color:#CC00CC;
+padding:40px 80px;
+}
+.A18{
+background-color:#FF0033;
+padding:40px 80px;
+}
+.A19{
+background-color:#99CC00;
+padding:40px 80px;
+}
+.A20{
+background-color:#996600;
+padding:40px 80px;
+}
+.A21{
+background-color:#9933FF;
+padding:40px 80px;
+}
+.A22{
+background-color:#FF9966;
+padding:40px 80px;
+}
+
+</style>
+<body>
+</br></br>
+<table >	
+<tr>
+<th class="A11">
+<a href="toggle.html">Management</a>
+</th>
+<th class="A12">
+<a href="new 3.html">Programs Offered</a>
+
+</th>
+<th class="A13">
+<a href="admin.htmls">Administration</a>
+</th>
+</tr>
+<tr>
+<td class="A14">
+<a href="eligibility.html">Eligibilty Criteria</a>
+</td>
+<td class="A15">
+<a href="application.html">Application Form</a>
+</td>
+<td class="A16">
+<a href="fees.html " >Fee Structure</a>
+</td>
+</tr>
+<tr>
+<td class="A17">
+<a href="http://onlinepay.drait.in/">Online Payment</a>
+ </td>
+<td class="A18">
+<a href="drait.html">TEQIP-Ⅲ</a>
+</td>
+<td class="A19">
+<a href="http://results.drait.in/">Examination Resluts</a>
+</td>
+</tr>
+<tr>
+<td class="A20">
+<a href="admission.html">Admissions</a>
+</td>
+<td class="A21">
+<a href="media.html">Media</a>
+</td>
+<td class="A22">
+<a href="https://pgthesis.drait.in/">PG Thesis Evalution</a>
+</td>
+
+</table>
+
+</body>
+</html>
